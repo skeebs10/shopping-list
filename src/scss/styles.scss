@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,900&display=swap');
 @import "reset";
 @import "core/neat";
+
 $cna-mq-default-breakpoint: '(max-width: 374.9999999999px)';
 $cna-mq-mobile-breakpoint: '(min-width: 375px)';
 $cna-mq-tablet-breakpoint: '(min-width: 768px)';
@@ -49,9 +50,9 @@ $cna-grid-large-display-configuration: (
     map-get($cna-mq-types, large-display)
   }
 );
-  $german: #8E6E95;
+  $german: #f07167;
   $kellie: #39A59C;
-  $allegra: #344759;
+  $allegra: #fdfcdc;
   $nicole: #E8741E;
   $width: 100vw;
   $sizeUnit: 22px;
@@ -94,7 +95,8 @@ body{
 }
 body {
   line-height: 1;
-}
+  text-align: center;
+
 ol,
 ul {
   list-style: none;
@@ -121,4 +123,31 @@ h1 {
   font-weight: 100;
   font-size: $sizeUnit * 2;
   width: $width;
+  text-align: center;
 }
+.Page-wrapper{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  .Page {
+    display: flex;
+    justify-content: space-around;
+    width: calc(100vw - 50px);
+    .column {
+      width: 100%;
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .heading{
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 0.1px solid transparentize(black, .35);
+        width: 100%;
+      }
+    }
+  }
